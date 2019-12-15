@@ -8,62 +8,6 @@
 <title>主页</title>
 <style>
 
-
-<div id="yiyan" style="
-width: 500px;
-background-color:rgba(255, 255, 255, 0);
-">
-<br />
-<br />
-<br />
-<script src="hitokoto.js"></script>
-<script>
-var num=Math.random();
-if(num>=0.6){
-var url="https://hitoapi.cc/sp/"
-var ajax = new XMLHttpRequest();
-ajax.onreadystatechange=function()
-  {
-  if (ajax.readyState==4 && ajax.status==200)
-    {
-   var hit = JSON.parse(ajax.responseText);
-    document.getElementById("yiyan").innerHTML="<br />"+hit.text+"<br> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp——"+hit.author;
-    }
-  }
-ajax.open('GET',url, true);
-ajax.send();
-}
-
-else{
-    var count=Math.floor(Math.random()*hit.length);
-    var ran=hit[count];
-   var text=ran.hitokoto;
-   var author=ran.source;
-   /*var ajax = new XMLHttpRequest();
-ajax.onreadystatechange=function()
-  {
-  if (ajax.readyState==4)
-    {
-    alert(ajax.status);
-    alert(ajax.responseText);
-   var hit = JSON.parse(ajax.responseText);
-   var ran=hit(Math.random(hit.length-2)+lit.length);
-   var text=ran.hitokoto;
-   var author=ran.source;
-   document.getElementById("yiyan").innerHTML="<br />"+text+"<br> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp——"+author;
-   }
-  }
-  ajax.open('GET','customHitokotoB.json', true);
-  ajax.send();
-  */
-   document.getElementById("yiyan").innerHTML="<br />"+text+"<br> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp——"+author;
-}
-</script>
-<br>
-
-
-
-
 /*下方这句不动它，翻译开始*/
 
 * {
@@ -562,14 +506,7 @@ document.addEventListener('click', function(){_countAA-=10;doBBBd()}, false)
 <br>
 <font color="#303030">
 <font size="6">―·❀·―</font>
-<br><br><div id="lwlhitokoto"><script>lwlhitokoto()</script></div><div class="lwlhitokoto">
-            <script type="text/javascript" src="./主页_files/index.php"></script>
-            <span></span>
-            <p>
-                <script>
-                    binduyan();
-                </script>
-            </p>
+
         </div><table width="32" border="0"> 
 
 
@@ -587,8 +524,6 @@ document.addEventListener('click', function(){_countAA-=10;doBBBd()}, false)
 下方window.location.href =主页搜索引擎地址，目前为自用Pc版百度内部搜索，加上浏览器的顶部搜索即为双搜索，使用更方便
 
 -->
-
-<script type="text/javascript" src="https://api.lwl12.com/hitokoto/main/get?encode=js&amp;charset=utf-8"></script>
 
 <!--<div id="yiyan" style="
 width: 500px;
@@ -645,8 +580,17 @@ ajax.onreadystatechange=function()
 
 
         
-    
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>    
 <script type="text/javascript">
+$.ajax({
+	type:"get",
+	url:"https://hitoapi.cc/sp/",
+	async:true,
+	success:function(res){
+		$('body').append(res.text)
+	}
+});
+
 var last_kw = '';
 var max_sug_len = 1; //搜索建议最短触发长度
 
