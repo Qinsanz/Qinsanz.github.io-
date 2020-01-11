@@ -8,6 +8,14 @@
     </url>
 
     <url>
+        <loc>http://yoursite.com/2020/01/11/JAVA%E5%9F%BA%E7%A1%80/</loc>
+        <lastmod>2020-01-11T15:09:47.638Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://yoursite.com/2020/01/01/Markdown%E5%86%99%E4%BD%9C/</loc>
         <lastmod>2020-01-11T14:59:51.762Z</lastmod>
         <changefreq>weekly</changefreq>
