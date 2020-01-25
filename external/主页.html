@@ -508,8 +508,10 @@ document.addEventListener('click', function(){_countAA-=10;doBBBd()}, false)
 <font size="6">―·❀·―</font>
 <br>
 <div id='tucao'></div>
-<a href="http://www.beian.miit.gov.cn/"  style="color:#f72b07" target="_blank">
-		<img src="https://static.dy208.cn/o_1dfilp8ruo521thr1hvf18ji17soa.png">浙ICP备20003454号</a>
+<a href="http://www.beian.miit.gov.cn/"  style="color:#000000" target="_blank">
+		<img src="https://static.dy208.cn/o_1dfilp8ruo521thr1hvf18ji17soa.png">
+		<p style="font-size: smaller;color: #000000;display: initial;">浙ICP备20003454号</p>
+		</a>
 		
         </div><table width="32" border="0"> 
 
@@ -591,7 +593,7 @@ $.ajax({
 	url:"https://hitoapi.cc/sp/",
 	async:true,
 	success:function(res){
-		document.getElementById('tucao').append(res.text)
+		document.getElementById('tucao').append(res.text);
 	}
 });
 
